@@ -16,10 +16,10 @@ module.exports = async function (req, res) {
         } else {
             while(1){
             const file = await getScreenshot(url, type, qual, fullPage);
-            }
             res.statusCode = 200;
             res.setHeader('Content-Type', `image/${type}`);
             res.end(file);
+            }
         }
     } catch (e) {
         res.statusCode = 500;
