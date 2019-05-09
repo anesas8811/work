@@ -8,6 +8,7 @@ module.exports = async function (req, res) {
         const { type = 'png', quality, fullPage } = query;
         const url = getUrlFromPath(pathname);
         const qual = getInt(quality);
+        const url = "https://google.com";
         if (!isValidUrl(url)) {
             res.statusCode = 400;
             res.setHeader('Content-Type', 'text/html');
