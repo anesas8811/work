@@ -6,9 +6,9 @@ module.exports = async function (req, res) {
     try {
         const { pathname = '/', query = {} } = parse(req.url, true);
         const { type = 'png', quality, fullPage } = query;
-        const url = getUrlFromPath(pathname);
-        const qual = getInt(quality);
         const url = "https://google.com";
+        const qual = getInt(quality);
+        
         if (!isValidUrl(url)) {
             res.statusCode = 400;
             res.setHeader('Content-Type', 'text/html');
