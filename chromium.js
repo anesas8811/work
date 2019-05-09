@@ -10,8 +10,8 @@ async function getScreenshot(url, type, quality, fullPage) {
 
     const page = await browser.newPage();
     await page.goto(url);
+    await page.waitFor(5000);
     const file = await page.screenshot({ type,  quality, fullPage });
-    console.log("hellow");
     await browser.close();
     return file;
 }
